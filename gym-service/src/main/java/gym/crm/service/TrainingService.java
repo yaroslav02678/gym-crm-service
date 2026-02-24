@@ -15,7 +15,9 @@ import gym.trainerworkloadservice.dto.TrainerWorkloadRequest;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,6 +34,7 @@ public class TrainingService {
     private final TrainerRepository trainerRepository;
     private final TrainingTypeRepository trainingTypeRepository;
     private final WorkloadClient workloadClient;
+    private final JmsTemplate jmsTemplate;
 
     @Transactional
     public void addTraining(@Valid AddTrainingRequestDTO request) {
@@ -54,17 +57,19 @@ public class TrainingService {
 
         trainingRepository.save(training);
         log.info("Training added successfully");
-        TrainerWorkloadRequest request1 = new TrainerWorkloadRequest(
+        TrainerWorkloadRequest workloadRequest = new TrainerWorkloadRequest(
                 training.getTrainer().getUser().getUsername(),
                 training.getTrainer().getUser().getFirstName(),
                 training.getTrainer().getUser().getLastName(),
                 training.getTrainer().getUser().isActive(),
                 training.getTrainingDate(),
                 training.getTrainingDuration(),
-                TrainerWorkloadRequest.ActionType.ADD
+                TrainerWorkloadRequest.ActionType.ADD,
+                org.slf4j.MDC.get("transactionId")
         );
 
-        workloadClient.updateWorkload(request1);
+        log.info("Sending workload update to queue for trainer: {}", workloadRequest.getTrainerUsername());
+        jmsTemplate.convertAndSend("trainer-workload-queue", workloadRequest);
     }
 
     @Transactional(readOnly = true)
