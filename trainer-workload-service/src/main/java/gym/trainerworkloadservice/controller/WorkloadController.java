@@ -2,7 +2,7 @@ package gym.trainerworkloadservice.controller;
 
 
 import gym.trainerworkloadservice.dto.TrainerWorkloadRequest;
-import gym.trainerworkloadservice.model.TrainerSummaryResponse;
+import gym.trainerworkloadservice.model.TrainerSummary;
 import gym.trainerworkloadservice.service.WorkloadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +22,8 @@ public class WorkloadController {
     }
 
     @GetMapping("/{username}")
-    public ResponseEntity<TrainerSummaryResponse> getTrainerWorkload(@PathVariable String username) {
-        TrainerSummaryResponse summary = workloadService.getTrainerSummary(username);
+    public ResponseEntity<TrainerSummary> getTrainerWorkload(@PathVariable String username) {
+        TrainerSummary summary = workloadService.getTrainerSummary(username);
 
         return ResponseEntity.ok(summary);
     }
