@@ -75,7 +75,7 @@ class TrainerServiceTest {
         Training training = new Training();
         training.setTrainingName("Training 1");
         training.setTrainingDate(LocalDate.now());
-        training.setTrainingDuration(60L);
+        training.setTrainingDuration(60);
         training.setTrainingType(type);
         training.setTrainee(trainee);
         training.setTrainer(trainer);

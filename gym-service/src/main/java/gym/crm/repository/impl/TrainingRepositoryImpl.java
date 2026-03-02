@@ -21,4 +21,10 @@ public class TrainingRepositoryImpl implements TrainingRepository {
             return entityManager.merge(training);
         }
     }
+
+    @Override
+    public long count() {
+        return entityManager.createQuery("SELECT COUNT(t) FROM Training t", Long.class)
+                .getSingleResult();
+    }
 }
