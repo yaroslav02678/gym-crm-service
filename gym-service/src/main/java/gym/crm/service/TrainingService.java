@@ -1,6 +1,5 @@
 package gym.crm.service;
 
-import gym.crm.client.WorkloadClient;
 import gym.crm.dto.training.TrainingTypeDTO;
 import gym.crm.dto.training.request.AddTrainingRequestDTO;
 import gym.crm.model.Trainee;
@@ -15,7 +14,6 @@ import gym.trainerworkloadservice.dto.TrainerWorkloadRequest;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
@@ -33,7 +31,6 @@ public class TrainingService {
     private final TraineeRepository traineeRepository;
     private final TrainerRepository trainerRepository;
     private final TrainingTypeRepository trainingTypeRepository;
-    private final WorkloadClient workloadClient;
     private final JmsTemplate jmsTemplate;
 
     @Transactional

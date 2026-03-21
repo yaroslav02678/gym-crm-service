@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/gym-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/com/crm/gymservice/GymServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/com/crm/gymservice/GymServiceApplication.java" afterDir="false" />
+    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="Integration tests was implemented by Cucumber framework.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/FeignClientInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/WorkloadClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/WorkloadClientFallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/service/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/service/TrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer-workload-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/gym-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -33,7 +38,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/yaroslav02678/gym-service&quot;,
+    &quot;url&quot;: &quot;https://github.com/yaroslav02678/gym-crm-service&quot;,
     &quot;accountId&quot;: &quot;254efde8-bb1f-4dc9-bb2c-416cf472095c&quot;
   }
 }</component>
@@ -42,7 +47,7 @@
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -54,31 +59,55 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: gym_component (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: gym_component.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: workload_component.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunCucumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkloadServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;Database connection parameters found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GymCrmApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.TrainerWorkloadServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.TrainerWorkloadSeviceApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/gym-crm/gym-crm-system/trainer-workload-service/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/gym-crm/gym-crm-system/gym-service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gym-crm\gym-crm-system\gym-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gym-crm\gym-crm-system\gym-service\src\test\resources\features" />
+      <recent name="E:\gym-crm\gym-crm-system\trainer-workload-service\src\test\resources\features" />
+      <recent name="E:\gym-crm\gym-crm-system\trainer-workload-service\src\test\resources" />
+      <recent name="E:\gym-crm\gym-crm-system\gym-service\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,7 +120,108 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
+  <component name="RunManager" selected="Cucumber Java.Feature: workload_component">
+    <configuration name="Feature: gym_component (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
+      <option name="GLUE" value="gym.trainerworkloadservice" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="gym-service" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: gym_component" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: gym_component" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/gym_component.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="gym-service" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: gym_component" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: workload_component" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="trainer-workload-service" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: workload_component" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="false" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trainer-workload-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice" />
+      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.RunCucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkloadServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trainer-workload-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice" />
+      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.WorkloadServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="discovery-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="gym.discoveryserver.DiscoveryServerApplication" />
@@ -113,6 +243,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cucumber Java.Feature: gym_component (1)" />
+      <item itemvalue="Cucumber Java.Feature: gym_component" />
+      <item itemvalue="Cucumber Java.Feature: workload_component" />
+      <item itemvalue="JUnit.RunCucumberTest" />
+      <item itemvalue="JUnit.WorkloadServiceTest" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.GymCrmApplication" />
+      <item itemvalue="Spring Boot.TrainerWorkloadServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Feature: workload_component" />
+        <item itemvalue="JUnit.RunCucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: gym_component (1)" />
+        <item itemvalue="JUnit.WorkloadServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -137,11 +285,89 @@
       <workItem from="1771179568247" duration="3331000" />
       <workItem from="1771257976788" duration="5520000" />
       <workItem from="1771263705139" duration="2760000" />
-      <workItem from="1771319384867" duration="6439000" />
+      <workItem from="1771319384867" duration="6827000" />
+      <workItem from="1771400713653" duration="72000" />
+      <workItem from="1771924450889" duration="1009000" />
+      <workItem from="1771934379043" duration="41000" />
+      <workItem from="1771951653649" duration="6150000" />
+      <workItem from="1772019710368" duration="4000" />
+      <workItem from="1772104173154" duration="3554000" />
+      <workItem from="1772192216535" duration="8000" />
+      <workItem from="1772360603328" duration="908000" />
+      <workItem from="1772361528342" duration="96000" />
+      <workItem from="1772361657424" duration="3983000" />
+      <workItem from="1772451958662" duration="4354000" />
+      <workItem from="1772456392525" duration="1452000" />
+      <workItem from="1772458999905" duration="733000" />
+      <workItem from="1772531758488" duration="663000" />
+      <workItem from="1772552872363" duration="1785000" />
+      <workItem from="1772575254772" duration="437000" />
+      <workItem from="1774114152126" duration="1089000" />
+      <workItem from="1774121517337" duration="313000" />
     </task>
+    <task id="LOCAL-00001" summary="First Microservice">
+      <option name="closed" value="true" />
+      <created>1771327401907</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771327401907</updated>
+    </task>
+    <task id="LOCAL-00002" summary="migrated to ActiveMQ message broker">
+      <option name="closed" value="true" />
+      <created>1771970735832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771970735832</updated>
+    </task>
+    <task id="LOCAL-00003" summary="migrated to MongoDB in trainer-workload-service">
+      <option name="closed" value="true" />
+      <created>1772107275070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772107275070</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Integration tests was implemented by Cucumber framework.">
+      <option name="closed" value="true" />
+      <created>1772459103323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772459103323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Microservice" />
+    <MESSAGE value="migrated to ActiveMQ message broker" />
+    <MESSAGE value="migrated to MongoDB in trainer-workload-service" />
+    <MESSAGE value="Integration tests was implemented by Cucumber framework." />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration tests was implemented by Cucumber framework." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gym_crm_system$WorkloadServiceTest.ic" NAME="WorkloadServiceTest Coverage Results" MODIFIED="1772107175357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>gym.trainerworkloadservice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/gym_crm_system$Feature__workload_component.ic" NAME="Feature: workload_component Coverage Results" MODIFIED="1772363823566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+      <EXCLUDED_FILTER>gym.trainerworkloadservice.*</EXCLUDED_FILTER>
+    </SUITE>
   </component>
 </project>
