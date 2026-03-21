@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="Integration tests was implemented by Cucumber framework.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/FeignClientInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/WorkloadClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/client/WorkloadClientFallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/service/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/service/TrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainer-workload-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/pom.xml" afterDir="false" />
+    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="remove Feign client and cleanup dead REST code">
+      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/main/java/gym/trainerworkloadservice/jms/WorkloadMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/main/java/gym/trainerworkloadservice/jms/WorkloadMessageListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -303,7 +298,7 @@
       <workItem from="1772552872363" duration="1785000" />
       <workItem from="1772575254772" duration="437000" />
       <workItem from="1774114152126" duration="1089000" />
-      <workItem from="1774121517337" duration="313000" />
+      <workItem from="1774121517337" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="First Microservice">
       <option name="closed" value="true" />
@@ -337,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772459103323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="remove Feign client and cleanup dead REST code">
+      <option name="closed" value="true" />
+      <created>1774122016572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774122016572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +362,8 @@
     <MESSAGE value="migrated to ActiveMQ message broker" />
     <MESSAGE value="migrated to MongoDB in trainer-workload-service" />
     <MESSAGE value="Integration tests was implemented by Cucumber framework." />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration tests was implemented by Cucumber framework." />
+    <MESSAGE value="remove Feign client and cleanup dead REST code" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove Feign client and cleanup dead REST code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gym_crm_system$WorkloadServiceTest.ic" NAME="WorkloadServiceTest Coverage Results" MODIFIED="1772107175357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

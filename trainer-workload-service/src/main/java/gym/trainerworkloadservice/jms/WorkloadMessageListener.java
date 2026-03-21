@@ -16,7 +16,7 @@ public class WorkloadMessageListener {
 
     private final WorkloadService workloadService;
 
-    @JmsListener(destination = "trainer-workload-queue")
+    @JmsListener(destination = "trainer-workload-queue", concurrency = "jmsListenerContainerFactory")
     public void receiveMessage(TrainerWorkloadRequest request) {
 
         String txId = request.getTransactionId();
