@@ -14,6 +14,7 @@ import gym.crm.model.Training;
 import gym.crm.model.User;
 import gym.crm.repository.TraineeRepository;
 import gym.crm.repository.TrainerRepository;
+import gym.trainerworkloadservice.dto.TrainerWorkloadRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -81,6 +82,9 @@ public class TraineeService {
         if (!traineeRepository.existsByUsername(username)) {
             throw new TraineeNotFoundException("Trainee not found: " + username);
         }
+        TrainerWorkloadRequest message = new TrainerWorkloadRequest();
+        message.setActionType(TrainerWorkloadRequest.ActionType.DELETE);
+        message.setTraineeUsername(username);
         traineeRepository.deleteByUsername(username);
         log.info("Trainee profile deleted: {}", username);
     }

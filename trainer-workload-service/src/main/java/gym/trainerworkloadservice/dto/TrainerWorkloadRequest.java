@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Builder
 public class TrainerWorkloadRequest {
     private String trainerUsername;
+    private String traineeUsername;
     private String firstName;
     private String lastName;
     private boolean isActive;
