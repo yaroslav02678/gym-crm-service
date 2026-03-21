@@ -16,7 +16,7 @@ public class WorkloadMessageListener {
 
     private final WorkloadService workloadService;
 
-    @JmsListener(destination = "trainer-workload-queue", containerFactory = "jmsListenerContainerFactory")
+    @JmsListener(destination = "${app.queue.name}", containerFactory = "jmsListenerContainerFactory")
     public void receiveMessage(TrainerWorkloadRequest request) {
 
         String txId = request.getTransactionId();

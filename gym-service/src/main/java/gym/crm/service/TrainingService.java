@@ -14,6 +14,7 @@ import gym.trainerworkloadservice.dto.TrainerWorkloadRequest;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,8 @@ public class TrainingService {
     private final TrainerRepository trainerRepository;
     private final TrainingTypeRepository trainingTypeRepository;
     private final JmsTemplate jmsTemplate;
+    @Value("${app.queue.name}")
+    private String workloadQueue;
 
     @Transactional
     public void addTraining(@Valid AddTrainingRequestDTO request) {
@@ -56,6 +59,7 @@ public class TrainingService {
         log.info("Training added successfully");
         TrainerWorkloadRequest workloadRequest = new TrainerWorkloadRequest(
                 training.getTrainer().getUser().getUsername(),
+                training.getTrainee().getUser().getUsername(),
                 training.getTrainer().getUser().getFirstName(),
                 training.getTrainer().getUser().getLastName(),
                 training.getTrainer().getUser().isActive(),
@@ -66,7 +70,7 @@ public class TrainingService {
         );
 
         log.info("Sending workload update to queue for trainer: {}", workloadRequest.getTrainerUsername());
-        jmsTemplate.convertAndSend("trainer-workload-queue", workloadRequest);
+        jmsTemplate.convertAndSend(workloadQueue, workloadRequest);
     }
 
     @Transactional(readOnly = true)
