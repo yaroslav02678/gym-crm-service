@@ -31,7 +31,8 @@ public class WorkloadMessageListener {
 
             log.info("Successfully processed workload for trainer: {}", request.getTrainerUsername());
         } catch (Exception e) {
-            log.error("Error processing workload message: {}", e.getMessage());
+            log.error("Error processing workload message", e);
+            throw e;
         } finally {
             MDC.remove("transactionId");
         }
