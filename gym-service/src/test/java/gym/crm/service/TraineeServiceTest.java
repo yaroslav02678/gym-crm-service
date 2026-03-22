@@ -1,5 +1,6 @@
 package gym.crm.service;
 
+import gym.crm.config.JmsConfig;
 import gym.crm.dto.trainee.request.TraineeRegistrationRequestDTO;
 import gym.crm.dto.trainee.request.UpdateTraineeProfileRequestDTO;
 import gym.crm.dto.trainee.response.GetTraineeProfileResponseDTO;
@@ -11,11 +12,13 @@ import gym.crm.model.TrainingType;
 import gym.crm.model.User;
 import gym.crm.repository.TraineeRepository;
 import gym.crm.repository.TrainerRepository;
+import gym.crm.repository.TrainingTypeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.jms.core.JmsTemplate;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
@@ -32,7 +35,6 @@ class TraineeServiceTest {
     @Mock private TraineeRepository traineeRepository;
     @Mock private TrainerRepository trainerRepository;
     @Mock private CredentialService credentialService;
-
     @InjectMocks private TraineeService traineeService;
 
     @Test
