@@ -12,6 +12,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
@@ -20,8 +22,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class TrainerServiceTest {
@@ -29,6 +30,7 @@ class TrainerServiceTest {
     @Mock private TrainerRepository trainerRepository;
     @Mock private TrainingTypeRepository trainingTypeRepository;
     @Mock private CredentialService credentialService;
+    @Mock private PasswordEncoder passwordEncoder;
 
     @InjectMocks private TrainerService trainerService;
 
@@ -40,6 +42,7 @@ class TrainerServiceTest {
         when(trainingTypeRepository.findById(1L)).thenReturn(Optional.of(type));
         when(credentialService.generateUsername("John", "Doe")).thenReturn("John.Doe");
         when(credentialService.generateRandomPassword()).thenReturn("pass");
+        when(passwordEncoder.encode(any())).thenReturn("hashed_password");
 
         var res = trainerService.createTrainer(req);
 

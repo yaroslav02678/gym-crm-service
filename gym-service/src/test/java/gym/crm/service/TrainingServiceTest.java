@@ -38,18 +38,29 @@ class TrainingServiceTest {
     @BeforeEach
     void setUp() {
         ReflectionTestUtils.setField(trainingService, "workloadQueue", "trainer-workload-queue");
+        User user = new User();
+        user.setUsername("John.Doe");
+
+        Trainer trainer = new Trainer();
+        trainer.setUser(user);
     }
 
     @Test
     void addTraining_Success() {
         AddTrainingRequestDTO req = new AddTrainingRequestDTO("Trainee", "Trainer", "Yoga Session", LocalDate.now(), 60L);
+        User user = new User();
+        user.setUsername("John.Doe");
+        user.setFirstName("John");
+        user.setLastName("Doe");
+        user.setActive(true);
 
         Trainee trainee = new Trainee();
         Trainer trainer = new Trainer();
+        trainer.setUser(user);
         trainer.setSpecialization(new TrainingType(1L, "Yoga"));
 
         when(traineeRepository.findByUsername("Trainee")).thenReturn(Optional.of(trainee));
-        when(trainerRepository.findByUsername("Trainer")).thenReturn(Optional.of(trainer));
+        when(trainerRepository.findByUsername("John.Doe")).thenReturn(Optional.of(trainer));
 
         trainingService.addTraining(req);
 

@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="use property placeholder for JMS queue instead of hardcoded string">
+    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="add unit test, which cover JMS">
+      <change afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/ComponentStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/CucumberSpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/IntegrationStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/config/JmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/config/JmsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/dto/trainee/request/UpdateTraineeProfileRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/dto/trainee/request/UpdateTraineeProfileRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/dto/trainer/request/UpdateTrainerProfileRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/java/gym/crm/dto/trainer/request/UpdateTrainerProfileRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/GymStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/bdd/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/controller/AuthControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/controller/AuthControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TraineeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TraineeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TrainerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TrainerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TrainingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/crm/service/TrainingServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/main/java/gym/trainerworkloadservice/config/JmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/main/java/gym/trainerworkloadservice/config/JmsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/java/gym/gymservice/GymServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/java/gym/gymservice/GymServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/test/resources/features/system_integration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/test/resources/features/system_integration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +74,31 @@
     "Cucumber Java.Feature: gym_component (1).executor": "Run",
     "Cucumber Java.Feature: gym_component.executor": "Run",
     "Cucumber Java.Feature: workload_component.executor": "Run",
+    "Cucumber Java.Scenario: Change trainee status.executor": "Run",
+    "Cucumber Java.Scenario: Create trainee successfully.executor": "Run",
+    "Cucumber Java.Scenario: Create trainee with invalid data.executor": "Run",
+    "Cucumber Java.Scenario: Create training successfully.executor": "Run",
+    "Cucumber Java.Scenario: Create training with invalid data.executor": "Run",
+    "Cucumber Java.Scenario: Create training with non-existent trainee.executor": "Run",
+    "Cucumber Java.Scenario: Create training with non-existent trainer.executor": "Run",
+    "Cucumber Java.Scenario: Create training without authentication.executor": "Run",
+    "Cucumber Java.Scenario: Delete trainee.executor": "Run",
+    "Cucumber Java.Scenario: Full flow from training creation to workload update.executor": "Run",
+    "Cucumber Java.Scenario: Get not assigned trainers.executor": "Run",
+    "Cucumber Java.Scenario: Get trainee profile not found.executor": "Run",
+    "Cucumber Java.Scenario: Get trainee profile.executor": "Run",
+    "Cucumber Java.Scenario: Get trainee trainings list.executor": "Run",
+    "Cucumber Java.Scenario: Get training types.executor": "Run",
+    "Cucumber Java.Scenario: Update trainee profile.executor": "Run",
+    "Cucumber Java.Scenario: [Negative] Create training with non-existent trainer.executor": "Run",
+    "Cucumber Java.Scenario: [Negative] Create training without authentication.executor": "Run",
+    "Cucumber Java.Scenario: [Positive] Create training and trigger workload update.executor": "Run",
+    "JUnit.RunCucumberTest (1).executor": "Debug",
     "JUnit.RunCucumberTest.executor": "Run",
     "JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded.executor": "Run",
     "JUnit.WorkloadServiceTest.executor": "Run",
+    "JUnit.controller in gym-service.executor": "Coverage",
+    "JUnit.service in gym-service.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "Database connection parameters found",
     "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
@@ -125,11 +158,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded">
-    <configuration name="Feature: gym_component (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: gym_component">
+    <configuration name="Feature: gym_component" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
-      <option name="GLUE" value="gym.trainerworkloadservice" />
+      <option name="GLUE" value="gym.trainerworkloadservice gym.bdd" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="gym-service" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
@@ -145,82 +178,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: workload_component" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Change trainee status" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/trainer-workload-service/src/test/resources/features/workload_component.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
+      <option name="GLUE" value="gym.trainerworkloadservice gym.bdd" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="trainer-workload-service" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: workload_component" />
+      <module name="gym-service" />
+      <option name="NAME_FILTER" value="^Change trainee status$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Change trainee status$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Change trainee status" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
-        <pattern>
-          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
-          <option name="ENABLED" value="true" />
-          <option name="INCLUDE" value="false" />
-        </pattern>
-      </extension>
-      <extension name="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trainer-workload-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice" />
-      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.RunCucumberTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Delete trainee" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
+      <option name="GLUE" value="gym.trainerworkloadservice gym.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="gym-service" />
+      <option name="NAME_FILTER" value="^Delete trainee$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Delete trainee$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Delete trainee" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gym.crm.service.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gym.crm.service" />
-      <option name="MAIN_CLASS_NAME" value="gym.crm.service.TrainingServiceTest" />
-      <option name="METHOD_NAME" value="shouldSendMessageToQueue_whenTrainingAdded" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkloadServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trainer-workload-service" />
+    <configuration name="Scenario: Get not assigned trainers" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
+      <option name="GLUE" value="gym.trainerworkloadservice gym.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="gym-service" />
+      <option name="NAME_FILTER" value="^Get not assigned trainers$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Get not assigned trainers$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Get not assigned trainers" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gym.trainerworkloadservice.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice" />
-      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.WorkloadServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Get trainee trainings list" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/gym-service/src/test/resources/features/gym_component.feature" />
+      <option name="GLUE" value="gym.trainerworkloadservice gym.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="gym-service" />
+      <option name="NAME_FILTER" value="^Get trainee trainings list$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Get trainee trainings list$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Get trainee trainings list" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -247,22 +280,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Feature: gym_component (1)" />
-      <item itemvalue="Cucumber Java.Feature: workload_component" />
-      <item itemvalue="JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded" />
-      <item itemvalue="JUnit.RunCucumberTest" />
-      <item itemvalue="JUnit.WorkloadServiceTest" />
+      <item itemvalue="Cucumber Java.Feature: gym_component" />
+      <item itemvalue="Cucumber Java.Scenario: Change trainee status" />
+      <item itemvalue="Cucumber Java.Scenario: Delete trainee" />
+      <item itemvalue="Cucumber Java.Scenario: Get not assigned trainers" />
+      <item itemvalue="Cucumber Java.Scenario: Get trainee trainings list" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.GymCrmApplication" />
       <item itemvalue="Spring Boot.TrainerWorkloadServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded" />
-        <item itemvalue="Cucumber Java.Feature: workload_component" />
-        <item itemvalue="JUnit.RunCucumberTest" />
-        <item itemvalue="Cucumber Java.Feature: gym_component (1)" />
-        <item itemvalue="JUnit.WorkloadServiceTest" />
+        <item itemvalue="Cucumber Java.Feature: gym_component" />
+        <item itemvalue="Cucumber Java.Scenario: Get not assigned trainers" />
+        <item itemvalue="Cucumber Java.Scenario: Get trainee trainings list" />
+        <item itemvalue="Cucumber Java.Scenario: Change trainee status" />
+        <item itemvalue="Cucumber Java.Scenario: Delete trainee" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +341,8 @@
       <workItem from="1772575254772" duration="437000" />
       <workItem from="1774114152126" duration="1089000" />
       <workItem from="1774121517337" duration="2354000" />
-      <workItem from="1774123930065" duration="2674000" />
+      <workItem from="1774123930065" duration="8999000" />
+      <workItem from="1774256199196" duration="4821000" />
     </task>
     <task id="LOCAL-00001" summary="First Microservice">
       <option name="closed" value="true" />
@@ -390,7 +424,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774123775466</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add unit test, which cover JMS">
+      <option name="closed" value="true" />
+      <created>1774170267470</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774170267470</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +460,8 @@
     <MESSAGE value="Improve error logging" />
     <MESSAGE value="extend workload request with traineeUsername for delete operations" />
     <MESSAGE value="use property placeholder for JMS queue instead of hardcoded string" />
-    <option name="LAST_COMMIT_MESSAGE" value="use property placeholder for JMS queue instead of hardcoded string" />
+    <MESSAGE value="add unit test, which cover JMS" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit test, which cover JMS" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gym_crm_system$WorkloadServiceTest.ic" NAME="WorkloadServiceTest Coverage Results" MODIFIED="1772107175357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -427,6 +470,11 @@
     <SUITE FILE_PATH="coverage/gym_crm_system$Feature__workload_component.ic" NAME="Feature: workload_component Coverage Results" MODIFIED="1772363823566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>io.cucumber.core.cli.*</FILTER>
       <EXCLUDED_FILTER>gym.trainerworkloadservice.*</EXCLUDED_FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/gym_crm_system$service_in_gym_service.ic" NAME="service in gym-service Coverage Results" MODIFIED="1774174775115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/gym_crm_system$controller_in_gym_service.ic" NAME="controller in gym-service Coverage Results" MODIFIED="1774174834814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/gym_crm_system$Feature__gym_component.ic" NAME="Feature: gym_component Coverage Results" MODIFIED="1774257948592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
     </SUITE>
   </component>
 </project>

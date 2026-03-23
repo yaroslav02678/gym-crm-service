@@ -19,6 +19,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
@@ -35,6 +37,7 @@ class TraineeServiceTest {
     @Mock private TraineeRepository traineeRepository;
     @Mock private TrainerRepository trainerRepository;
     @Mock private CredentialService credentialService;
+    @Mock private PasswordEncoder passwordEncoder;
     @InjectMocks private TraineeService traineeService;
 
     @Test
@@ -42,9 +45,11 @@ class TraineeServiceTest {
         TraineeRegistrationRequestDTO req = new TraineeRegistrationRequestDTO("Ivan", "Ivanov", LocalDate.now(), "Addr");
         when(credentialService.generateUsername(any(), any())).thenReturn("Ivan.Ivanov");
         when(credentialService.generateRandomPassword()).thenReturn("pass");
+        when(passwordEncoder.encode(any())).thenReturn("hashed_pass");
 
         TraineeRegistrationResponseDTO res = traineeService.createTrainee(req);
 
+        assertNotNull(res);
         assertEquals("Ivan.Ivanov", res.getUsername());
         verify(traineeRepository).save(any(Trainee.class));
     }

@@ -1,3 +1,4 @@
+@integration
 Feature: Microservices Integration Test
 
   Scenario: Full flow from training creation to workload update

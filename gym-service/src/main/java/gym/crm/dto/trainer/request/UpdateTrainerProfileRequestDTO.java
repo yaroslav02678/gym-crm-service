@@ -1,6 +1,7 @@
 package gym.crm.dto.trainer.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Data
@@ -20,7 +21,7 @@ public class UpdateTrainerProfileRequestDTO {
 
     private Long specializationId;
 
-    @NotBlank(message = "Status is required")
+    @NotNull(message = "Status is required")
     private boolean isActive;
 
     public boolean getIsActive() {
