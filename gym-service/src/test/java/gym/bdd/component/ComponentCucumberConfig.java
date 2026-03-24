@@ -1,4 +1,4 @@
-package gym.bdd;
+package gym.bdd.component;
 
 import gym.crm.GymCrmApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
@@ -8,11 +8,12 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
+@SpringBootTest(classes = GymCrmApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("component-test")
 @CucumberContextConfiguration
-@SpringBootTest(classes = GymCrmApplication.class, webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
-@ActiveProfiles("test")
-public class CucumberSpringConfiguration {
+public class ComponentCucumberConfig {
     @MockitoBean
     private JmsTemplate jmsTemplate;
 }

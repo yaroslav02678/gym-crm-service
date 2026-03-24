@@ -1,6 +1,5 @@
-package gym.bdd;
+package gym.bdd.component;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import gym.crm.dto.training.request.AddTrainingRequestDTO;
 import gym.crm.dto.trainee.request.TraineeRegistrationRequestDTO;
@@ -10,7 +9,6 @@ import gym.crm.model.User;
 import gym.crm.repository.TraineeRepository;
 import gym.crm.repository.TrainerRepository;
 import gym.crm.repository.TrainingRepository;
-import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -21,15 +19,16 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.times;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -50,6 +49,7 @@ public class ComponentStepDefinitions {
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private TrainingRepository trainingRepository;
+
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private TraineeRepository traineeRepository;
@@ -205,7 +205,7 @@ public class ComponentStepDefinitions {
 
     @And("a message should be sent to the {string}")
     public void a_message_should_be_sent_to_the(String queueName) {
-        verify(jmsTemplate).convertAndSend(eq(queueName), any(Object.class));
+        verify(jmsTemplate, times(1)).convertAndSend(eq(queueName), any(Object.class));
     }
 
     @And("the response should contain training types")

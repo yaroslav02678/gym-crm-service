@@ -1,4 +1,4 @@
-@component @training
+@component
 Feature: Gym Service Component Test
 
   @positive
