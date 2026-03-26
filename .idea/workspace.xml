@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="integration tests implemented">
-      <change afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/java/gym/trainerworkloadservice/controller/WorkloadControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/java/gym/trainerworkloadservice/service/WorkloadServiceTest.java" afterDir="false" />
+    <list default="true" id="6e6c06a1-a60a-4389-8aa4-468401ada4ed" name="Changes" comment="unit test for trainer-workload-service implemented">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gym-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer-workload-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer-workload-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer-workload-service/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-service/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gym-service/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainer-workload-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/trainer-workload-service/src/test/resources/application-test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,7 @@
         <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -45,7 +49,7 @@
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -55,89 +59,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: gym_component (1).executor": "Run",
-    "Cucumber Java.Feature: gym_component.executor": "Run",
-    "Cucumber Java.Feature: system_integration (1).executor": "Run",
-    "Cucumber Java.Feature: system_integration.executor": "Run",
-    "Cucumber Java.Feature: workload_component.executor": "Run",
-    "Cucumber Java.Scenario: Change trainee status.executor": "Run",
-    "Cucumber Java.Scenario: Create trainee successfully.executor": "Run",
-    "Cucumber Java.Scenario: Create trainee with invalid data.executor": "Run",
-    "Cucumber Java.Scenario: Create training successfully.executor": "Run",
-    "Cucumber Java.Scenario: Create training with invalid data.executor": "Run",
-    "Cucumber Java.Scenario: Create training with non-existent trainee.executor": "Run",
-    "Cucumber Java.Scenario: Create training with non-existent trainer.executor": "Run",
-    "Cucumber Java.Scenario: Create training without authentication.executor": "Run",
-    "Cucumber Java.Scenario: Delete trainee.executor": "Run",
-    "Cucumber Java.Scenario: Full flow from training creation to workload update.executor": "Run",
-    "Cucumber Java.Scenario: Get not assigned trainers.executor": "Run",
-    "Cucumber Java.Scenario: Get trainee profile not found.executor": "Run",
-    "Cucumber Java.Scenario: Get trainee profile.executor": "Run",
-    "Cucumber Java.Scenario: Get trainee trainings list.executor": "Run",
-    "Cucumber Java.Scenario: Get training types.executor": "Run",
-    "Cucumber Java.Scenario: Multiple trainings should be aggregated.executor": "Run",
-    "Cucumber Java.Scenario: Trainings across different days are aggregated in same month.executor": "Run",
-    "Cucumber Java.Scenario: Update trainee profile.executor": "Run",
-    "Cucumber Java.Scenario: [Negative] Create training with non-existent trainer.executor": "Run",
-    "Cucumber Java.Scenario: [Negative] Create training without authentication.executor": "Run",
-    "Cucumber Java.Scenario: [Positive] Create training and trigger workload update.executor": "Run",
-    "JUnit.ComponentTestRunner.executor": "Run",
-    "JUnit.E2ETestRunner.executor": "Run",
-    "JUnit.IntegrationTestRunner.executor": "Run",
-    "JUnit.RunCucumberTest (1).executor": "Debug",
-    "JUnit.RunCucumberTest.executor": "Run",
-    "JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded.executor": "Run",
-    "JUnit.WorkloadControllerTest.executor": "Run",
-    "JUnit.WorkloadControllerTest.updateWorkload_ReturnsOk.executor": "Run",
-    "JUnit.WorkloadServiceTest.executor": "Run",
-    "JUnit.WorkloadServiceTest.processTransaction_NewTrainer_CreatesSummary.executor": "Run",
-    "JUnit.controller in gym-service.executor": "Coverage",
-    "JUnit.java in trainer-workload-service.executor": "Coverage",
-    "JUnit.service in gym-service.executor": "Coverage",
-    "JUnit.trainerworkloadservice in trainer-workload-service.executor": "Coverage",
-    "Maven.discovery-server [package].executor": "Run",
-    "Maven.gym-crm-system [clean].executor": "Run",
-    "Maven.gym-service [clean].executor": "Run",
-    "Maven.gym-service [compile].executor": "Run",
-    "Maven.gym-service [package].executor": "Run",
-    "Maven.trainer-workload-service [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "Database connection parameters found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.DiscoveryServerApplication.executor": "Run",
-    "Spring Boot.GymCrmApplication.executor": "Run",
-    "Spring Boot.TrainerWorkloadServiceApplication.executor": "Run",
-    "Spring Boot.TrainerWorkloadSeviceApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_directory_selection": "E:/gym-crm/gym-crm-system/trainer-workload-service/src/test/java",
-    "last_opened_file_path": "E:/gym-crm/gym-crm-system/gym-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: gym_component (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: gym_component.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: system_integration (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: system_integration.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: workload_component.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Change trainee status.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create trainee successfully.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create trainee with invalid data.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create training successfully.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create training with invalid data.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create training with non-existent trainee.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create training with non-existent trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create training without authentication.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Delete trainee.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Full flow from training creation to workload update.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Get not assigned trainers.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Get trainee profile not found.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Get trainee profile.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Get trainee trainings list.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Get training types.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Multiple trainings should be aggregated.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Trainings across different days are aggregated in same month.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Update trainee profile.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: [Negative] Create training with non-existent trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: [Negative] Create training without authentication.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: [Positive] Create training and trigger workload update.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ComponentTestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.E2ETestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IntegrationTestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunCucumberTest (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.RunCucumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrainingServiceTest.shouldSendMessageToQueue_whenTrainingAdded.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkloadControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkloadControllerTest.updateWorkload_ReturnsOk.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkloadServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkloadServiceTest.processTransaction_NewTrainer_CreatesSummary.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.controller in gym-service.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.controller in trainer-workload-service.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.java in trainer-workload-service.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.service in gym-service.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.trainerworkloadservice in trainer-workload-service.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.discovery-server [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gym-crm-system [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gym-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gym-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gym-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.trainer-workload-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;Database connection parameters found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GymCrmApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TrainerWorkloadServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TrainerWorkloadSeviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/gym-crm/gym-crm-system/trainer-workload-service/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/gym-crm/gym-crm-system/gym-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -163,34 +168,18 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.trainerworkloadservice in trainer-workload-service">
-    <configuration name="WorkloadControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trainer-workload-service" />
+  <component name="RunManager" selected="JUnit.java in trainer-workload-service">
+    <configuration name="ComponentTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gym-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gym.trainerworkloadservice.controller.*" />
+          <option name="PATTERN" value="gym.bdd.component.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.controller.WorkloadControllerTest" />
+      <option name="PACKAGE_NAME" value="gym.bdd.component" />
+      <option name="MAIN_CLASS_NAME" value="gym.bdd.component.ComponentTestRunner" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkloadControllerTest.updateWorkload_ReturnsOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trainer-workload-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gym.trainerworkloadservice.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="gym.trainerworkloadservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="gym.trainerworkloadservice.controller.WorkloadControllerTest" />
-      <option name="METHOD_NAME" value="updateWorkload_ReturnsOk" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -214,6 +203,14 @@
       <module name="trainer-workload-service" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/trainer-workload-service/src/test/java/gym/trainerworkloadservice/controller" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in trainer-workload-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trainer-workload-service" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/trainer-workload-service/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -248,10 +245,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.WorkloadControllerTest" />
-      <item itemvalue="JUnit.WorkloadControllerTest.updateWorkload_ReturnsOk" />
+      <item itemvalue="JUnit.ComponentTestRunner" />
       <item itemvalue="JUnit.WorkloadServiceTest" />
       <item itemvalue="JUnit.controller in trainer-workload-service" />
+      <item itemvalue="JUnit.java in trainer-workload-service" />
       <item itemvalue="JUnit.trainerworkloadservice in trainer-workload-service" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.GymCrmApplication" />
@@ -259,11 +256,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in trainer-workload-service" />
+        <item itemvalue="JUnit.ComponentTestRunner" />
         <item itemvalue="JUnit.trainerworkloadservice in trainer-workload-service" />
         <item itemvalue="JUnit.controller in trainer-workload-service" />
         <item itemvalue="JUnit.WorkloadServiceTest" />
-        <item itemvalue="JUnit.WorkloadControllerTest.updateWorkload_ReturnsOk" />
-        <item itemvalue="JUnit.WorkloadControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +309,8 @@
       <workItem from="1774123930065" duration="8999000" />
       <workItem from="1774256199196" duration="16754000" />
       <workItem from="1774273448465" duration="7344000" />
-      <workItem from="1774336619530" duration="937000" />
+      <workItem from="1774336619530" duration="4954000" />
+      <workItem from="1774515677377" duration="5145000" />
     </task>
     <task id="LOCAL-00001" summary="First Microservice">
       <option name="closed" value="true" />
@@ -418,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774337098355</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="unit test for trainer-workload-service implemented">
+      <option name="closed" value="true" />
+      <created>1774337835699</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1774337835699</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,18 +455,8 @@
     <MESSAGE value="add unit test, which cover JMS" />
     <MESSAGE value="add new scenario and implemented omponent tests" />
     <MESSAGE value="integration tests implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="integration tests implemented" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/trainer-workload-service/src/test/java/gym/trainerworkloadservice/service/WorkloadServiceTest.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="unit test for trainer-workload-service implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit test for trainer-workload-service implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gym_crm_system$WorkloadServiceTest.ic" NAME="WorkloadServiceTest Coverage Results" MODIFIED="1772107175357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -470,9 +466,11 @@
       <FILTER>io.cucumber.core.cli.*</FILTER>
       <EXCLUDED_FILTER>gym.trainerworkloadservice.*</EXCLUDED_FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/gym_crm_system$java_in_trainer_workload_service.ic" NAME="java in trainer-workload-service Coverage Results" MODIFIED="1774337208152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/gym_crm_system$java_in_trainer_workload_service.ic" NAME="java in trainer-workload-service Coverage Results" MODIFIED="1774343791315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/gym_crm_system$service_in_gym_service.ic" NAME="service in gym-service Coverage Results" MODIFIED="1774174775115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/gym_crm_system$controller_in_gym_service.ic" NAME="controller in gym-service Coverage Results" MODIFIED="1774174834814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/gym_crm_system$trainerworkloadservice_in_trainer_workload_service.ic" NAME="trainerworkloadservice in trainer-workload-service Coverage Results" MODIFIED="1774337604471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/gym_crm_system$controller_in_trainer_workload_service.ic" NAME="controller in trainer-workload-service Coverage Results" MODIFIED="1774337584311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/gym_crm_system$Feature__gym_component.ic" NAME="Feature: gym_component Coverage Results" MODIFIED="1774257948592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>io.cucumber.core.cli.*</FILTER>
     </SUITE>

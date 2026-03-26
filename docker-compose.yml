@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  activemq:
+    image: apache/activemq-classic:latest
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    networks:
+      - gym-network
+
+  postgres-db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: gym_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    networks:
+      - gym-network
+
+  mongodb:
+    image: mongo:latest
+    networks:
+      - gym-network
+
+  gym-service:
+    build: ./gym-service
+    container_name: gym-service
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/gym_db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_ACTIVEMQ_BROKER_URL=tcp://activemq:61616
+      - EUREKA_CLIENT_ENABLED=false
+    depends_on:
+      - postgres-db
+      - activemq
+    networks:
+      - gym-network
+
+  # Сервіс звітів
+  workload-service:
+    build: ./trainer-workload-service
+    container_name: workload-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/trainer_workload_db
+      - SPRING_ACTIVEMQ_BROKER_URL=tcp://activemq:61616
+      - EUREKA_CLIENT_ENABLED=false
+    depends_on:
+      - mongodb
+      - activemq
+    networks:
+      - gym-network
+
+networks:
+  gym-network:
+    driver: bridge
